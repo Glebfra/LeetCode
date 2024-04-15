@@ -4,7 +4,7 @@ from typing import List
 class Solution:
     def generate(self, numRows: int) -> List[List[int]]:
         """
-        This function generates the pascal triangle
+        This method generates the pascal triangle
 
         >>> Solution().generate(5)
         [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
