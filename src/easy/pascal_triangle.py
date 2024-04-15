@@ -19,6 +19,26 @@ class Solution:
                 triangle[i][j+1] = triangle[i-1][j] + triangle[i-1][j+1]
         return triangle
 
+    def getRow(self, rowIndex: int) -> List[int]:
+        """
+        This method return the pascal triangle row
+
+        >>> Solution().getRow(3)
+        [1, 3, 3, 1]
+        >>> Solution().getRow(0)
+        [1]
+        >>> Solution().getRow(1)
+        [1, 1]
+        """
+
+        triangle = [1]
+        for i in range(rowIndex):
+            prev_triangle = triangle.copy()
+            triangle.append(1)
+            for j in range(1, i+1):
+                triangle[j] = prev_triangle[j-1] + prev_triangle[j]
+        return triangle
+
 
 if __name__ == '__main__':
     from doctest import testmod
