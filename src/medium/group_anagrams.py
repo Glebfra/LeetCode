@@ -14,7 +14,7 @@ class Solution:
         anagram_dict = dict()
         for word in strs:
             sorted_word = ''.join(sorted(word))
-            if sorted_word not in list(anagram_dict.keys()):
+            if sorted_word not in anagram_dict:
                 anagram_dict[sorted_word] = []
             anagram_dict[sorted_word].append(word)
 
